@@ -1,12 +1,19 @@
 services:
     run:
-        build: .
+        build: 
+            context: .
+            args:
+              UID: ${UID}
+              USERNAME: ${USERNAME} 
+              GID: ${GID}
+              GROUPNAME: ${GROUPNAME}
+              WORKDIR: ${WORKDIR}
         container_name: devcontainer
         entrypoint:
             - /bin/bash
         tty: true
-        working_dir: /root/app/
         volumes:
-          - ../:/root/app
+          - ../:/home/${USERNAME}/${WORKDIR}
         ports:
           - "3000:3000"
+        user: "${UID}:${GID}"
