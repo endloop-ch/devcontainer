@@ -2,10 +2,11 @@ services:
     run:
         build: .
         container_name: devcontainer
-        network_mode: host
         entrypoint:
             - /bin/bash
         tty: true
         working_dir: /root/app/
         volumes:
           - ../:/root/app
+        ports:
+          - "3000:3000"
