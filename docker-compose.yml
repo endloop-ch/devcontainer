@@ -1,5 +1,6 @@
 services:
     run:
+        image: ${CONTAINERNAME}
         build: 
             context: .
             args:
@@ -8,7 +9,7 @@ services:
               GID: ${GID}
               GROUPNAME: ${GROUPNAME}
               WORKDIR: ${WORKDIR}
-        container_name: devcontainer
+        container_name: ${CONTAINERNAME}
         entrypoint:
             - /bin/bash
         tty: true
