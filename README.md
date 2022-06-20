@@ -9,6 +9,7 @@ Docker container for development
     - User group
     - Workdir of container
     - Container/Image name
+    - Port to be exposed
 - Run `docker-compose up -d --build`
 
 Done!

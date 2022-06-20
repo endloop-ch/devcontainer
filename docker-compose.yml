@@ -16,5 +16,5 @@ services:
         volumes:
           - ../:/home/${USERNAME}/${WORKDIR}
         ports:
-          - "3000:3000"
+          - "${PORT}:${PORT}"
         user: "${UID}:${GID}"

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker exec -it devcontainer /bin/bash
+docker exec -it dev-flashcards /bin/bash
